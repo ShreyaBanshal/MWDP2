@@ -12,69 +12,100 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        .container {
+            display: grid;
+            justify-content: space-evenly;
+            justify-items: center;
+            font-size: 22px;
+        }
     </style>
 </head>
 
 <body>
+    <div class="container">
+        <h1>Health Survey Form</h1>
+        <table>
+            <form action="/submit" method="post">
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td> <input type="text" id="name" name="name" required></td>
+                </tr><br>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">Age:</label>
+                    </td>
+                    <td><input type="number" id="age" name="age" required></td>
+                </tr> <br>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Gender:</label>
+                    </td>
+                    <td> <select id="gender" name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select></td>
+                </tr><br>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="health_condition">Current Health Condition:</label>
+                    </td>
+                    <td><textarea id="health_condition" name="health_condition" rows="4" required></textarea></td>
+                </tr><br>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Do you engage in regular physical activity?</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="activity_yes" name="activity" value="yes" required>
+                        <label for="activity_yes">Yes</label>
+                        <input type="radio" id="activity_no" name="activity" value="no" required>
+                        <label for="activity_no">No</label>
+                    </td>
+                </tr><br>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="diet">Describe your typical diet:</label>
+                    </td>
+                    <td> <input type="text" id="diet" name="diet" required></td>
+                </tr><br>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>How many hours of sleep do you get per night?</label>
+                    </td>
+                    <td><input type="number" id="sleep_hours" name="sleep_hours" required></td><br>
 
-    <h1>Health Survey Form</h1>
-    <table>
-        <form action="/submit" method="post">
-            <tr>
-                <td><label for="name">Name:</label></td>
-                <td> <input type="text" id="name" name="name" required></td>
-            </tr><br>
-            <tr>
-                <td>
-                    <label for="age">Age:</label>
-                </td>
-                <td><input type="number" id="age" name="age" required></td>
-            </tr> <br>
-            <tr>
-                <td>
-                    <label for="gender">Gender:</label>
-                </td>
-                <td> <select id="gender" name="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select></td>
-            </tr><br>
-            <tr>
-                <td>
-                    <label for="health_condition">Current Health Condition:</label>
-                </td>
-                <td><textarea id="health_condition" name="health_condition" rows="4" required></textarea></td>
-            </tr><br>
-            <tr>
-                <td>
-                    <label>Do you engage in regular physical activity?</label>
-                </td>
-                <td>
-                    <input type="radio" id="activity_yes" name="activity" value="yes" required>
-                    <label for="activity_yes">Yes</label>
-                    <input type="radio" id="activity_no" name="activity" value="no" required>
-                    <label for="activity_no">No</label>
-                </td>
-            </tr><br>
-            <tr>
-                <td>
-                    <label for="diet">Describe your typical diet:</label>
-                </td>
-                <td> <input type="text" id="diet" name="diet" required></td>
-            </tr><br>
-            <tr>
-                <td>
-                    <label>How many hours of sleep do you get per night?</label>
-                </td>
-                <td><input type="number" id="sleep_hours" name="sleep_hours" required></td><br>
-
-            <tr>
-                <td><input type="submit" value="Submit"></td>
-            </tr>
-
-        </form>
-    </table>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </form>
+        </table>
+    </div>
 </body>
 
 </html>
